@@ -1,18 +1,18 @@
 function avaliarFuncionario(){
    let nome = document.getElementById("nome").value
-   let anosex = document.getElementById("anosex").value
-   let salario = document.getElementById("salario").value
+   let anosex = Number (document.getElementById("anosex").value)
+   let salario = Number (document.getElementById("salario").value)
    
    let nivel;
    let bonus;
    let pagamento; 
 
    if (anosex < 2){
-       nivel = "Júnior"; 
+        nivel = "Júnior"; 
    }else if(anosex <= 5){
-       nivel = "Pleno"; 
+        nivel = "Pleno"; 
    }else{
-    nivel = "Sênior"
+        nivel = "Sênior"
    }
    if(salario > 2500){
         bonus = 300;  
@@ -30,7 +30,5 @@ function avaliarFuncionario(){
     <p> Salário ${salario.toFixed(2)}</p>
     <p> Bônus ${bonus.toFixed(2)}</p>
     <p> Pagamento ${pagamento.toFixed(2)}</p> 
-
-
-    `
+   `
 }
